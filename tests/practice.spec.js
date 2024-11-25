@@ -16,4 +16,5 @@ test('Launching Browser',async ({page})=>
 
 await page.goto('https://rahulshettyacademy.com/loginpagePractise/')
 
+
 });
