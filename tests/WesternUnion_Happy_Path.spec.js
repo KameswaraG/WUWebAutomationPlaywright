@@ -34,11 +34,12 @@ test("WU R3 Happy Path flow",async ({page}) =>{
   const requestCode= page.locator("#button-request-code")
   await requestCode.click();
   //const otp=page.locator(".ng-star-inserted input")
-  const otp= await page.$$(".ng-star-inserted input")
-  console.log(otp)
+  const otp= page.locator(".ng-star-inserted input")
+  console.log(await otp.count())
+
   const staticPin="147272".toString()
   for (let index = 0; index < staticPin.length; index++) {
-    await otp[index].fill(staticPin[index])
+    await otp.nth(index).fill(staticPin[index])
     
   }
   //await  otp.fill(147272)
