@@ -26,7 +26,7 @@ test("WU R3 Happy Path flow",async ({page}) =>{
  
   await lastName.fill("Changer")
   await password.fill("Welcome@123")
-  await email.fill("sameple1@gmail.com")
+  await email.fill("sameple10@gmail.com")
   await checkBox.click()
   await registerButton1.click()
   const emailMFALink= page.locator("[amplitude-id$='link-verify-with-email']")

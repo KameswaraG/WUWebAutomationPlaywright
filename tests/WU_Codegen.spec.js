@@ -1,0 +1,33 @@
+const { test, expect } =require('@playwright/test');
+
+test.only('COdegen UI Test', async ({ page }) => {
+  await page.goto('https://wudispatcher-uatrs2.westernunion.com/gb/en/home.html');
+  await page.getByLabel('Primary').getByRole('link', { name: 'Register' }).click();
+  await page.goto('https://wudispatcher-uatrs2.westernunion.com/gb/en/web/user/register');
+  await page.getByLabel('Name(s)').click();
+  await page.getByLabel('Name(s)').fill('Raghu');
+  await page.getByLabel('Last name').click();
+  await page.getByLabel('Last name').fill('KUmar');
+  await page.getByLabel('Your email address').click();
+  await page.getByLabel('Your email address').fill('kameswarao.sjdfsdd@gmail.com');
+  await page.getByLabel('Create your password').click();
+  await page.getByLabel('Create your password').fill('Welcome123');
+  await page.locator('#smonewuser label').click();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  await page.getByLabel('Verify with email').click();
+  await page.getByLabel('Request code').click();
+  await page.locator('.border-otp-box').first().click();
+  await page.locator('.border-otp-box').first().fill('1');
+  await page.locator('span:nth-child(2) > .border-otp-box').fill('4');
+  await page.locator('span:nth-child(3) > .border-otp-box').fill('7');
+  await page.locator('span:nth-child(4) > .border-otp-box').fill('2');
+  await page.locator('span:nth-child(5) > .border-otp-box').fill('7');
+  await page.locator('span:nth-child(6) > .border-otp-box').fill('2');
+  await page.getByLabel('Request code').click();
+  await page.goto('https://wudispatcher-uatrs2.westernunion.com/gb/en/web/send-money/start');
+  await page.getByText('Device verification successful').nth(1).click();
+  await page.getByRole('link', { name: 'Log out' }).click();
+  await page.getByLabel('Country').click();
+  await page.getByLabel('Country').fill('India');
+  await page.goto('https://wudispatcher-uatrs2.westernunion.com/in/en/home.html');
+});
