@@ -52,3 +52,9 @@ let mergedArray=fruits.concat(vegetables)
 console.log(mergedArray)
 console.log(mergedArray.length)
 
+
+//forEach method in arrays will return each element individually
+
+fruits.forEach((fruit)=>{
+    console.log('each fruit:',fruit)
+})
