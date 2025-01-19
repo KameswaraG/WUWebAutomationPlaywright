@@ -29,3 +29,24 @@ for (let key in person) {
     console.log(key +"-----"+person[key]);
 }
 
+
+/**
+  * While loops implementation
+  */
+let age=20;
+while(age<30)
+{
+   console.log("You are Teenarage currently",age)
+   age++
+}
+
+/**
+  * Do while loops implementation
+  */
+ let count=0;
+ do{
+    console.log("Count is", count);
+    count++
+ }while(count<5)
+
+ 
