@@ -50,3 +50,5 @@ while(age<30)
  }while(count<5)
 
  
+// let name="ka"
+// console.log(Number(name)) // when the value is not a number it returns NaN instead of actual value
