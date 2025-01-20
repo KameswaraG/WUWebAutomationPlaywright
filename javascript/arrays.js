@@ -58,3 +58,51 @@ console.log(mergedArray.length)
 fruits.forEach((fruit)=>{
     console.log('each fruit:',fruit)
 })
+
+//map method in arrays will return a new array with the results of calling a provided function on every element in the array
+
+let numbers=[1,2,3,4,5,6,7,8]
+let evenNumbers=numbers.map((number)=> number*2)
+
+console.log(evenNumbers)
+
+//fahrenheit to celcius conversion using map method
+
+let fahrenheit=[32,64,96,128,160,192,224,256]
+
+function farToCelcius(fahrenheit)
+{
+    return (fahrenheit-32)*5/9
+}
+
+let celcius=fahrenheit.map(farToCelcius)
+console.log(celcius)
+
+//filter method in arrays will return a new array with all elements that pass the test implemented by the provided function
+// find the even numbers of an array using filter function
+
+let num=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+
+let evenNubers= num.filter((n)=>
+    {
+        if(n%2===0)
+        return n
+    } )
+    
+console.log(evenNubers)
+
+let employees=[
+    {name:'John',age:25,gender:'male'},
+    {name:'Jane',age:30,gender:'male'},
+    {name:'Mike',age:35,gender:'male'},
+    {name:'Sarah',age:28,gender:'female'},
+    {name:'Emily',age:27,gender:'female'},
+    {name:'David',age:32,gender:'male'}
+]
+
+let maleEmployees=employees.filter((employee)=>
+    {
+        return employee.gender==='male'
+    } )
+    
+console.log(maleEmployees)
