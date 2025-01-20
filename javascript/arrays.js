@@ -106,3 +106,38 @@ let maleEmployees=employees.filter((employee)=>
     } )
     
 console.log(maleEmployees)
+
+//reduce function, returns a single value after traversing the full array and performing the required operation
+
+let intNumberArray =[1,2,3,4,5,6,7,8,9]
+let sum=intNumberArray.reduce((acc,num)=>acc+num,0)
+console.log(sum) 
+
+// find the maximum value in an array using reduce function
+let numberArray=[10,5,24,8,36,65,9]
+let maxNumber=numberArray.reduce((max,num)=>{
+    if(num>max)
+    {
+        return num
+    }
+    else
+    {
+        return max
+    }
+    
+},numberArray[0]);
+console.log(maxNumber)
+
+
+let cartItems=[
+    {name:'apple',price:2,quantity:5},
+    {name:'banana',price:1.5,quantity:3},
+    {name:'orange',price:1.75,quantity:7},
+    {name:'mango',price:2.25,quantity:2}
+]
+let totalPrice=cartItems.reduce((acc,cart)=>acc+cart.price,0);
+console.log(totalPrice);
+//total items in a cart
+let totalItems=cartItems.reduce((acc,cart)=>acc+cart.quantity,0);
+
+console.log(totalItems);
